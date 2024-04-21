@@ -1,0 +1,278 @@
+/* style.css */
+
+/* Global styles */
+body {
+    font-family: Open Sans, Arial, sans-serif;
+    padding: 0;
+    background-color: #E09900;
+    background-image: url(https://scottishpantrynetwork.org.uk/wp-content/uploads/2023/11/data-science-064.png);
+    font-weight: bold;
+
+}
+
+.contactbody{
+    background-color:#3a6063;
+    overflow-x: hidden;
+}
+
+
+#logo{
+    width: auto;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 0;
+    max-height: 54%;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    }
+  
+/* Homepage styles */
+h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 80px;
+}
+
+
+.item-img {
+  max-width: 100px; /* Adjust the maximum width of the image as needed */
+  height: auto; /* Maintain aspect ratio */
+  text-align: center;
+}
+
+
+/* Donation form styles */
+form {
+    margin-top: 20px;
+    background-color: #E09900;
+    padding: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.btn.btn-primary {
+    color: #fff;
+    background-color:#3a6063;
+    border-color: #3a6063;
+    
+}
+
+.contactheader {
+    position: relative;
+  }
+  
+  
+  .contact-overlay {
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #3a6063;
+    background-color:#E09900;
+    z-index: 1; /* Ensure the overlay appears on top of the video */
+    text-shadow: 0.08em 0.08em 0.08em rgba(0,0,0,0.4);
+  }
+  
+  .contact-overlay h2 {
+    font-size: 94px;
+
+  }
+
+  .entriescontent {
+    color: #3A6063;
+    padding: 30px;
+  }
+
+
+  .contactcontent{
+    padding: 100px;
+  }
+
+  .contactcontent .card-text{
+    color: #E09900;
+  }
+
+  .contactcontent .card {
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactcontent .card-body {
+    padding: 20px; /* Add padding inside the card body */
+  }
+  
+  .contactcontent .card-text h3 {
+    margin-bottom: 10px; /* Add some bottom margin to headings */
+  }
+  
+  .contactcontent .card-text p {
+    margin-bottom: 5px; /* Add some bottom margin to paragraphs */
+  }
+  
+  .contactcontent .card img {
+    max-width: 100%; /* Make sure images inside cards don't exceed their container */
+    border-top-left-radius: 10px; /* Ensure rounded corners match the card */
+    border-top-right-radius: 10px;
+  }
+  
+
+.aboutheader {
+    position: relative;
+    background-size: 100% 100%;
+  }
+
+  .aboutheader .module_header {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #3a6063; /* Adjust text color as needed */
+    font-size: 94px; /* Adjust font size as needed */
+    z-index: 1;
+    text-shadow: 0.08em 0.08em 0.08em rgba(0,0,0,0.4);
+  }
+
+  .video-container {
+    width: 100%; /* Set container width */
+    height: 400px; /* Set container height */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute positioning */
+}
+
+.video-container video {
+    position: absolute; /* Position absolute for precise control */
+    top: 100%; /* Move video to the center vertically */
+    left: 50%; /* Move video to the center horizontally */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+.aboutcontainer{
+    background-color: #E09900;
+}
+
+.navbar {
+   display: flex;
+   align-items: center; /* Center vertically */
+}
+
+.navbar-brand {
+    flex: 0 0 auto; /* Allow the logo to shrink and grow as needed */
+}
+
+#logo {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+}
+
+.navbar-brand {
+  margin-right: auto; /* Push logo to the left */
+}
+
+.ourstory {
+   
+    padding: 50px 0; /* Add padding for spacing */
+    
+}
+
+.storycontainer {
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: 100vh; /* Adjust as needed */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+ 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ourstory .card {
+  background-color: #3A6063; /* Background color for the card */
+}
+
+.ourstory .card-title,
+    .card-text {
+        color: #ffffff; /* Text color for the title and text */
+        justify-content: center;
+    }
+
+.et_pb_image_wrap{
+    display: flex;
+    justify-content: center;
+    width:"300px";
+    }
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+
+.aboutcontent {
+    padding: 20px;
+    
+}
+
+.aboutcontent .row {
+    flex-direction: column; /* Change direction to column on smaller screens */
+    justify-content: center;
+    align-items: center;
+}
+
+.et_pb_text_inner {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #243b3c;
+    
+}
+
+
+.aboutcontent img {
+    padding: 10px;
+    width: 100%; /* Adjust the width as needed */
+}
+
+@media screen and (min-width: 768px) {
+    .row.justify-content-center {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto;
+    }
+}
+
+#footer-bottom {
+    background-color: #1f1f1f;
+    color: #666;
+    padding: 15px 0 5px;
+}
+
+.nlcontent .card{
+    background-color: #E09900;
+    color: #c2cfd0;
+    font-size: 20px;
+
+}
+
+.nlcontent{
+    background-image: url(https://scottishpantrynetwork.org.uk/wp-content/uploads/2023/11/data-science-067.png);
+    background-color: #3A6063
+    ;
+}
