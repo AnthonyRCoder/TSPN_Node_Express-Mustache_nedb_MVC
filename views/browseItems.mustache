@@ -1,0 +1,66 @@
+<!-- views/browseItems.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+{{>navbar}}
+        <h1 style="margin: 10px;">Our Product</h1>
+ <div class="container">
+   {{#user}}
+<div class="text-right" style="margin: 1em;">
+    <a href="/new" class="btn btn-primary">
+     Add New Item
+    </a>
+</div>
+{{/user}}
+    <div class="row">
+        {{#items}}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{imageUrl}}" class="card-img-top" alt="item image">
+                <div class="card-body">
+                    <h5 class="card-title">{{productName}}</h5>
+                    <p class="card-text text-dark">
+                        <strong>Price:</strong> ${{price}}<br>
+                        <strong>Location:</strong> {{pantry}}<br>
+                        <strong>Expiration Date:</strong> {{expirationDate}}
+                    </p>
+                    {{#user}}
+                    {{#usable}}
+                    <form action="/posts/{{_id}}/select" method="POST">
+                            <input type="hidden" name="_method" value="PUT"> <!-- For overriding the POST method -->
+                            <button type="submit" class="btn btn-primary btn-sm">Select</button>
+                    </form>
+                    {{/usable}}
+                    {{/user}}
+                    {{^user}}
+                    <p class="text-danger">Sign in first to select</p>
+                    {{/user}}
+                    {{^usable}}
+                    <p class="text-danger">Not usable</p>
+                    {{/usable}}
+                </div>
+                <div class="card-footer">
+                  Written by <a href="/posts/{{_id}}">{{_id}}</a> , on {{author}}
+                </div>
+            </div>
+        </div>
+        {{/items}}
+    </div>
+</div>
+<footer id="main-footer">
+      <div id="footer-bottom">
+        <div class="container clearfix">
+          <ul class="et-social-icons"></ul>
+          <div id="footer-info">
+            Scottish Charitable Incorporated Organisation SC050443
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

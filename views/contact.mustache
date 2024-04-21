@@ -1,0 +1,175 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="contactbody">
+    {{>navbar}}
+
+    <!-- #main-header -->
+    <main>
+      <section class="contactheader">
+        <div class="video-container">
+          <video
+            loop="loop"
+            autoplay
+            playsinline
+            muted
+            width="100%"
+            height="auto"
+          >
+            <source
+              type="video/mp4"
+              src="https://scottishpantrynetwork.org.uk/wp-content/uploads/2023/11/Untitled-design-1.mp4"
+            />
+          </video>
+          <!-- Contact Us Section -->
+          <div class="contact-overlay">
+            <h2 class="module_header">Contact Us</h2>
+          </div>
+        </div>
+      </section>
+      
+      
+   
+      <section>
+          <div class="contactcontent">      
+                      <div class="row">
+                          <!-- Contact Info Column -->
+                          <div class="col-lg-4">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <img src="https://scottishpantrynetwork.org.uk/wp-content/uploads/2022/12/HQ.jpg" class="img-fluid" alt=""/>
+                                      <div class="card-text">
+                                          <h3>69-71 Aberdalgie Road</h3>
+                                          <p>Easterhouse</p>
+                                          <p>Glasgow</p>
+                                          <p>G34 9HJ</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Contact Form Column -->
+                          <div class="col-lg-4">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <img src="https://scottishpantrynetwork.org.uk/wp-content/uploads/2023/03/Phone3.jpg" class="img-fluid" alt=""/>
+                                      <div class="card-text">
+                                          <h3>0141 442 0349</h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Email Column -->
+                          <div class="col-lg-4">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <img src="https://scottishpantrynetwork.org.uk/wp-content/uploads/2022/12/Email-Icon-4-1.jpg" class="img-fluid" alt=""/>
+                                      <div class="card-text">
+                                          <h4>enquiries@scottishpantrynetwork.org.uk</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                      <!-- End Contact Section -->
+                    </section>
+
+                    <section>
+                      <div class="nlcontent">
+                        <div class="row">
+                          <!-- Left column for header -->
+                          <div class="col-md-6">
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                              <h2 class="mb-4 text-center " style="font-size: 74px; color: white;  ">Get In Touch</h2>
+                          </div>
+                          <!-- Right column for form -->
+                          <div class="col-md-6" style="padding: 30px;">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <form class="clearfix">
+                                          <div class="row">
+                                              <div class="col-md-6 form-group">
+                                                  <label for="et_pb_contact_first_name_0" class="sr-only">First Name</label>
+                                                  <input type="text" id="et_pb_contact_first_name_0" class="form-control" value="" name="et_pb_contact_first_name_0" placeholder="First Name" required>
+                                              </div>
+                                              <div class="col-md-6 form-group">
+                                                  <label for="et_pb_contact_last_name_0" class="sr-only">Last Name</label>
+                                                  <input type="text" id="et_pb_contact_last_name_0" class="form-control" value="" name="et_pb_contact_last_name_0" placeholder="Last Name" required>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-md-6 form-group">
+                                                  <label for="et_pb_contact_email_0" class="sr-only">Email Address</label>
+                                                  <input type="email" id="et_pb_contact_email_0" class="form-control" value="" name="et_pb_contact_email_0" placeholder="Email Address" required>
+                                              </div>
+                                              <div class="col-md-6 form-group">
+                                                  <label for="et_pb_contact_interested_in_0" class="sr-only">I am Interested In</label>
+                                                  <input type="text" id="et_pb_contact_interested_in_0" class="form-control" value="" name="et_pb_contact_interested_in_0" placeholder="I am Interested In" required>
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="et_pb_contact_message_0" class="sr-only">Message</label>
+                                              <textarea name="et_pb_contact_message_0" id="et_pb_contact_message_0" class="form-control" placeholder="Message" required></textarea>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary">Send Message</button>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                          <div class="row mt-5">
+                              <div class="col-md-12">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <h1 class="card-title mb-4">Join Our Newsletter</h1>
+                                          <p class="card-text mb-4">Please sign up for our newsletter if you would like to keep up to date with the latest developments on the Pantry Network.</p>
+                                          <form method="post">
+                                              <div class="form-group">
+                                                  <input type="text" class="form-control" id="et_pb_signup_firstname" placeholder="Name" name="et_pb_signup_firstname">
+                                              </div>
+                                              <div class="form-group">
+                                                  <input type="email" class="form-control" id="et_pb_signup_email" placeholder="Email" name="et_pb_signup_email">
+                                              </div>
+                                              <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End Newsletter Section -->
+                      </div>
+                  </section>
+                  
+                  
+                     
+                  </div>
+        
+            </div>
+        </div>
+        
+    </main>
+    <footer id="main-footer">
+      <div id="footer-bottom">
+        <div class="container clearfix">
+          <ul class="et-social-icons"></ul>
+          <div id="footer-info">
+            Scottish Charitable Incorporated Organisation SC050443
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

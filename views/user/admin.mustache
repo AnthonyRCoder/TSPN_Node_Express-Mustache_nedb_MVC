@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Admin</title>
+    <!-- CSS theme (includes Bootstrap)-->
+    {{>header}}
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header-->
+    <header id="main-header" data-height-onload="66">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/logo.png"
+              alt="The Scottish Pantry Network"
+              id="logo"
+              data-height-percentage="54"
+              data-actual-width="500"
+              data-actual-height="500"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Pantry</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about" aria-current="page">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact"> Contact Us </a>
+              </li>
+              {{^user}}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Sign in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Sign up</a>
+              </li>
+              {{/user}}
+              {{#user}}
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Sign out</a>
+              </li>
+              {{/user}}
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">Account</h1>
+                    <p class="fs-4">Use this interface to interact with and update the database.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="pt-4">
+        <div class="container ">
+            <div class="row row-cols-3">
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-plus-square-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Add new user</h2>
+                            <form action="/add" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input class="form-control" type="text" id='name' name="name" required>
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">View an employee</h2>
+                            <form action="/view" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input class="form-control" type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary" type="reset">Reset</button>
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">Show all employees</h2>
+                            <br /><br /><br /><br />
+                            <form action="/showAll" method="POST">
+                                <fieldset>
+                                    <button class="btn btn-primary" type="submit">Show All</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark text-center">
+    </footer>
+</body>
+
+</html>

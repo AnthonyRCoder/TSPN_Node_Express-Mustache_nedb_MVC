@@ -1,0 +1,97 @@
+<!-- views/addItem.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    {{>header}}
+</head>
+<body class="container">
+    <h2>Add New Item</h2>
+    <div class="text-left" style="margin: 1em;">
+          <a id="login" href="/loggedIn" class="btn btn-primary">Skip</a>    
+    </div>
+    <div class="text-right" style="margin: 1em;">
+        {{^user}}
+        <a id="login" href="/register" class="btn btn-primary">Register</a>
+        <a id="login" href="/login" class="btn btn-primary">Sign in</a>
+        {{/user}}
+        {{#user}}
+        <a id="logout" href="/logout" class="btn btn-primary">Sign out</a>
+        {{/user}}
+    </div>
+    <form method="post" role="form" action="/new">
+     <div class="form-group">
+            <label for="productName">Item Name</label>
+            <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter item name" required>
+        </div>
+        {{#user}}
+        <div class="form-group">
+            <label for="author">Author</label>
+            <!-- Set the value attribute to the user's author information -->
+            <input type="text" class="form-control" id="author" name="author" placeholder="Enter an author" value="{{author}}" required>
+        </div>
+        {{/user}}
+       
+        <div class="form-group">
+            <label for="type">Item Type</label>
+            <input type="text" class="form-control" id="type" name="type" placeholder="Enter item type" required>
+        </div>
+        <div class="form-group">
+            <label for="expirationDate">Expiration Date</label>
+            <input type="date" class="form-control" id="expirationDate" name="expirationDate" required>
+        </div>
+        <div class="form-group">
+            <label for="availability">Availability</label>
+            <select class="form-control" id="availability" name="availability" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+         <div class="form-group">
+            <label for="pantry">Select Pantry</label>
+            <select class="form-control" id="pantry" name="pantry" required>
+                <option value="">Select Pantry</option>
+                <option value="Parkhead School House">Parkhead School House</option>
+                <option value="Ruchazie Pantry">Ruchazie Pantry</option>
+                <option value="North West Community Pantry">North West Community Pantry</option>
+                <option value="Govan Pantry">Govan Pantry</option>
+                <option value="Shettleston Pop-Up Pantry">Shettleston Pop-Up Pantry</option>
+                <option value="Croy Pantry">Croy Pantry</option>
+                <option value="Castlemilk Pantry">Castlemilk Pantry</option>
+                <option value="Kilsyth Pantry">Kilsyth Pantry</option>
+                <option value="Courtyard Pantry">Courtyard Pantry</option>
+                <option value="Greenock Pantry">Greenock Pantry</option>
+                <option value="Port Glasgow Pantry">Port Glasgow Pantry</option>
+                <option value="Govanhill Pantry">Govanhill Pantry</option>
+                <option value="Linkes Pantry">Linkes Pantry</option>
+                <option value="Ayr Pantry">Ayr Pantry</option>
+                <option value="Pollok Pantry">Pollok Pantry</option>
+                <option value="Whiteinch Pantry">Whiteinch Pantry</option>
+                <option value="Falkirk Pantry (First Step Food Falkirk)">Falkirk Pantry (First Step Food Falkirk)</option>
+                <option value="The Larder West Lothian">The Larder West Lothian</option>
+                <option value="Food Facts Friends">Food Facts Friends</option>
+                <option value="Carbrain Pantry">Carbrain Pantry</option>
+                <option value="Croftpark Pantry">Croftpark Pantry</option>
+            </select>
+        </div>
+        <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+            <input type="url" class="form-control" id="imageUrl" name="imageUrl" placeholder="Enter image URL">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" name="price" placeholder="Enter item price" required>
+        </div>
+        <div class="form-group">
+            <label for="usable">Usable</label>
+            <select class="form-control" id="usable" name="usable" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Item" class="btn btn-primary">
+        </div>
+    </form>
+</body>
+</html>
