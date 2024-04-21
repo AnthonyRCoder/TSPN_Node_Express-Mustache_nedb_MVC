@@ -14,16 +14,7 @@ class Item {
 
 init() {
     this.db.insert({
-        productName: 'Bread',
-        type: 'Grain',
-        expirationDate: '2025-02-16',
-        availability: true,
-        imageUrl: 'https://assets.sainsburys-groceries.co.uk/gol/7559900/1/300x300.jpg',
-        author: 'Peter',
-        pantry: 'Ruchazie Pantry',
-        price: 1, 
-        usable: true,
-        selected: false
+      
     });
 
     console.log('db entry Peter item')
